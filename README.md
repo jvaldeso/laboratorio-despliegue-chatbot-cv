@@ -45,10 +45,10 @@ PINECONE_URL=https://tu-indice.svc.turegion.pinecone.io
 
 ## Paso 1 — Hacer fork del repositorio
 
-Railway despliega desde tus propios repositorios de GitHub, por eso el primer paso es hacer un **fork** — no clonar directamente este repo.
+Railway despliega desde tus propios repositorios de GitHub, así que el primer paso es hacer un **fork** para tener el repo en tu cuenta.
 
-1. En la esquina superior derecha de este repositorio haz click en **Fork**
-2. GitHub crea una copia del repo en tu cuenta
+1. En la esquina superior derecha haz click en **Fork**
+2. GitHub crea una copia en tu cuenta
 3. Clona tu fork:
 
 ```bash
