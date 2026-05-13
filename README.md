@@ -94,27 +94,7 @@ build/
 
 ---
 
-## Paso 4 — Probar Docker localmente
-
-```bash
-# Construir la imagen
-docker build -t chatbot-cv .
-
-# Correr el contenedor con las variables de entorno
-docker run -p 8085:8085 \
-  -e GEMINI_API_KEY=tu_clave \
-  -e PINECONE_API_KEY=tu_clave \
-  -e PINECONE_URL=tu_url \
-  chatbot-cv
-```
-
-La API estará disponible en `http://localhost:8085`
-
-Documentación Swagger: `http://localhost:8085/swagger-ui.html`
-
----
-
-## Paso 5 — Desplegar en Railway
+## Paso 4 — Desplegar en Railway
 
 1. Ve a [railway.app](https://railway.app) y crea una cuenta
 2. Click en **New Project** → **Deploy from GitHub repo**
