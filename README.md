@@ -32,6 +32,14 @@ PINECONE_URL=https://tu-indice.svc.turegion.pinecone.io
 - **PINECONE_API_KEY** → obtenerla en [app.pinecone.io](https://app.pinecone.io)
 - **PINECONE_URL** → la URL de tu índice en Pinecone (sección "Indexes")
 
+> ⚠️ **Nota importante — uso personal y aprendizaje**
+>
+> Los temas explorados en este laboratorio (RAG, Gemini, APIs externas) son exclusivamente para **uso personal y de aprendizaje**. Ten en cuenta lo siguiente:
+>
+> - **No va a funcionar en tu portátil corporativo.** Las políticas de red y seguridad de la empresa bloquean este tipo de herramientas. Para seguir el laboratorio es obligatorio usar tu **dispositivo personal**.
+> - **No uses estas APIs con datos de la empresa.** Gemini y Pinecone son servicios externos; enviarles información corporativa puede violar políticas internas de seguridad y privacidad.
+> - **¿Quieres llevar algo similar a un caso de uso interno?** Lo correcto es **consultar primero al equipo de IA** antes de construir cualquier solución. Dentro de la empresa existe un gobierno definido que establece cómo se deben diseñar e implementar este tipo de soluciones, qué herramientas están aprobadas y cómo garantizar el cumplimiento de los estándares de seguridad y datos.
+
 ---
 
 ## Paso 1 — Clonar el repositorio
