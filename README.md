@@ -1,6 +1,6 @@
-# Laboratorio — Despliegue de Chatbot CV en Render
+# Laboratorio — Despliegue de Chatbot CV en Railway
 
-API REST de un chatbot inteligente construido con **Spring Boot 3**, **Java 21**, **Gemini AI** y **Pinecone** como base de datos vectorial. Este repositorio es una guía práctica para aprender a desplegar una aplicación Java en Render usando Docker.
+API REST de un chatbot inteligente construido con **Spring Boot 3**, **Java 21**, **Gemini AI** y **Pinecone** como base de datos vectorial. Este repositorio es una guía práctica para aprender a desplegar una aplicación Java en Railway usando Docker.
 
 ---
 
@@ -14,7 +14,7 @@ API REST de un chatbot inteligente construido con **Spring Boot 3**, **Java 21**
 | Gemini AI | API | Modelo de lenguaje |
 | Pinecone | API | Base de datos vectorial |
 | Docker | - | Contenedorización |
-| Render | - | Plataforma de despliegue |
+| Railway | - | Plataforma de despliegue |
 
 ---
 
@@ -107,49 +107,19 @@ Documentación Swagger: `http://localhost:8085/swagger-ui.html`
 
 ---
 
-## Paso 5 — Crear el render.yaml
+## Paso 5 — Desplegar en Railway
 
-Crea un archivo `render.yaml` en la raíz del proyecto. Este archivo le dice a Render cómo desplegar la aplicación:
-
-```yaml
-services:
-  - type: web
-    name: chatbot-cv-back
-    runtime: docker
-    dockerfilePath: ./Dockerfile
-    envVars:
-      - key: GEMINI_API_KEY
-        sync: false
-      - key: PINECONE_API_KEY
-        sync: false
-      - key: PINECONE_URL
-        sync: false
-```
-
-### ¿Qué significa cada campo?
-
-| Campo | Descripción |
-|---|---|
-| `type: web` | Es un servicio web con HTTP |
-| `runtime: docker` | Render usa tu Dockerfile para construir |
-| `dockerfilePath` | Ruta al Dockerfile desde la raíz |
-| `sync: false` | Las variables se configuran manualmente en el dashboard de Render (no se sincronizan desde el repo por seguridad) |
-
----
-
-## Paso 6 — Desplegar en Render
-
-1. Ve a [render.com](https://render.com) y crea una cuenta
-2. Click en **New +** → **Web Service**
-3. Conecta tu repositorio de GitHub
-4. Render detecta el `render.yaml` automáticamente
-5. Ve a **Environment** y agrega las 3 variables de entorno:
+1. Ve a [railway.app](https://railway.app) y crea una cuenta
+2. Click en **New Project** → **Deploy from GitHub repo**
+3. Selecciona este repositorio
+4. Railway detecta el `Dockerfile` automáticamente y construye la imagen
+5. Ve a **Variables** y agrega las 3 variables de entorno:
    - `GEMINI_API_KEY`
    - `PINECONE_API_KEY`
    - `PINECONE_URL`
-6. Click en **Deploy**
+6. Ve a **Settings → Networking → Generate Domain** para obtener la URL pública
 
-Render construye la imagen Docker y despliega. El primer deploy tarda ~5 minutos.
+Railway construye la imagen Docker y despliega. El primer deploy tarda ~5 minutos.
 
 ---
 
@@ -171,8 +141,7 @@ laboratorio-despliegue-chatbot-cv/
 │
 │   ── Archivos que debes crear tú ──
 ├── Dockerfile                   # (ver Paso 2)
-├── .dockerignore                # (ver Paso 3)
-└── render.yaml                  # (ver Paso 5)
+└── .dockerignore                # (ver Paso 3)
 ```
 
 ---
@@ -198,4 +167,4 @@ chmod +x gradlew
 Asegúrate de que `build.gradle` tiene el plugin `org.springframework.boot`.
 
 **El contenedor arranca pero falla con 500**
-Verifica que las 3 variables de entorno estén configuradas correctamente en Render.
+Verifica que las 3 variables de entorno estén configuradas correctamente en Railway.
