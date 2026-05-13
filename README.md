@@ -36,7 +36,7 @@ PINECONE_URL=https://tu-indice.svc.turegion.pinecone.io
 >
 > Este laboratorio está diseñado para explorar y aprender sobre RAG, modelos de lenguaje y despliegue con Docker desde cero. Para sacarle el máximo provecho:
 >
-> - **Usa tu dispositivo personal.** Las APIs de Gemini y Pinecone son herramientas externas pensadas para experimentación, y es desde tu equipo personal donde vas a poder jugar con ellas libremente.
+> - **Usa tu dispositivo personal.** Las APIs de Gemini y Pinecone son herramientas externas pensadas para experimentación, y es desde tu equipo personal donde vas a poder jugar con ellas libremente. Ten en cuenta que la capa gratuita de estas plataformas suele incluir políticas de uso de datos donde la información enviada puede ser utilizada para mejorar sus modelos — por eso es importante no mezclarlas con información corporativa.
 > - **¿Te generó ideas para aplicarlo en tu trabajo?** Genial, ese es el objetivo. Si quieres explorar algo similar en un contexto interno, el equipo de IA es el mejor punto de partida — ya tienen el camino recorrido y pueden orientarte sobre cómo construirlo bien dentro del ecosistema de la empresa.
 
 ---
