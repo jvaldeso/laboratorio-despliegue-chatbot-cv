@@ -32,7 +32,7 @@ PINECONE_URL=https://tu-indice.svc.turegion.pinecone.io
 - **PINECONE_API_KEY** → se obtiene en el portal de Pinecone
 - **PINECONE_URL** → la URL de tu índice en Pinecone (sección "Indexes")
 
-> 🔒 **¿No puedes acceder a estos portales desde tu equipo?** Es posible que estén bloqueados en la red corporativa. Internamente, el acceso y la gestión de herramientas de IA está centralizado en el equipo de IA, por lo que algunas plataformas externas pueden no estar disponibles desde dispositivos o redes de la empresa. Por eso este laboratorio está pensado para hacerse desde tu **dispositivo personal**.
+> 🔒 **¿No puedes acceder a estos portales desde tu equipo?** Es posible que estén bloqueados en la red corporativa. La empresa tiene un proceso definido para adoptar herramientas de IA de forma segura, por lo que algunas plataformas externas aún no están habilitadas en la red interna. Por eso este laboratorio está pensado para hacerse desde tu **dispositivo personal**.
 
 > 💡 **Contexto del laboratorio**
 >
